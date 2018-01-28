@@ -1,0 +1,13 @@
+Dopo aver esplorato il sito VipWebAry ho scoperto che per attaccarlo è necessario in viare un messaggio dalla seguente pagina:
+http://vip.hacking.w3challs.com/index.php?page=contact
+Per riuscire ad ottenere un risultato da questa pagina ho modificato il valore associato all'utente che riceverà il messaggio,
+nello specifico ho cambiato il valore di Fr[4]Ger da "1" a "1 AND SLEEP(5)" per accertarmi che il campo destin fosse effettivamente
+iniettabile. In seguito ho progettato il tool in modo tale da automatizzare l'attacco e salvare i dati ottenuti e le istruzioni utilizzate.
+I dati sono salvati nel file "Challenge 2 - data" e le istruzioni nel file "Challenge 2 - log".
+Inoltre qui sotto sono presentati i dati in forma più leggibile con l'aggiunta delle password decifrate.
+
+VipWebArmy -> membres
+id  	login		password				BONUS: cracked password
+1   	Fr[4]Ger	b5c0b187fe309af0f4d35982fd961d7e	love
+2   	LuG[3]R		4188679c1d8a284ccc41a6b601869e05	kiss
+3   	K[1]LLeR	031700427b70a87b0203a7d78a85c0da	smack

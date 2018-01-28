@@ -1,0 +1,7 @@
+Come utilizzare il tool:
+
+1) Lanciare il tool da riga di comando o da editor.
+2) Inserire i dati richiesti dal tool (tipo di richiesta, url e parametri).
+3) Scegliere un database dalla lista presentata.
+4) Scegliere una tabella dalla lista presentata.
+5) I dati ottenuti sono salvati nel file "data" e le istruzioni utilizzate nel file "log".
